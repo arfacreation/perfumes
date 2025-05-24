@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buy</title>
+    <style>
+       
+               footer {
+            background-color: #1f1f1f;
+            color: #bbb1a7;
+            padding: 25px 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-family: 'Roboto', sans-serif;
+            border-top: 1px solid #422a18;
+        }
+          * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #f0ebe1;
+            overflow-x: hidden;
+        }
+        nav {
+            background-color: #1f1f1f;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #f0ebe1;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #e0afa0;
+        }
+         .buy-container {
+        max-width: 600px;
+        background: linear-gradient(145deg, #3c2321, #5c3a35);
+        padding: 30px;
+        border-radius: 15px;
+        margin: 40px auto;
+        box-shadow: 0 8px 15px rgba(92, 58, 53, 0.7);
+    }
+    h1 {
+        font-family: 'Playfair Display', serif;
+        color: #e0afa0;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    label {
+        display: block;
+        text-align: center;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #f0d6c0;
+        font-size: 1.1rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+   margin-left: 30%;
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+    }
+     input[type="submit"] {
+        background-color: #d9a77b;
+        border: none;
+        padding: 14px 40px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: 'Playfair Display', serif;
+        color: #121212;
+        border-radius: 30px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 8px 15px rgba(217, 167, 123, 0.7);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    input[type="submit"]:hover {
+        background-color: #b37854;
+        box-shadow: 0 10px 20px rgba(179, 120, 84, 0.85);
+        color: #fff;
+    }
+     
+    </style>
+</head>
+<body>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="fragrance-guide.html">Fragrance Guide</a>
+        <a href="buy.html">Buy</a>
+    </nav>
+    <br>
+    <h1>Purchase Your Favourite Perfume</h1>
+    <form id="buyForm">
+      <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="example@mail.com" />
+<label for="product">Select Perfume</label>
+            <select id="product" name="product" required>
+                <option value="">-- Choose a perfume --</option>
+                <option value="Elysian Bloom">$85.00 - Elysian Bloom</option>
+                <option value="Mystic Woods">$95.00 - Mystic Woods</option>
+                <option value="Citrus Zest">$75.00 - Citrus Zest</option>
+                <option value="Velvet Night">$110.00 - Velvet Night</option>
+                <option value="Ocean Breeze">$80.00 - Ocean Breeze</option>
+                <option value="Spiced Rose">$90.00 - Spiced Rose</option>
+                <option value="Golden Amber">$100.00 - Golden Amber</option>
+                <option value="Floral Garden">$70.00 - Floral Garden</option>
+                <option value="Enchanted Forest">$85.00 - Enchanted Forest</option>
+            </select>
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+            <input type="submit" value="Place Order" />
+        </form>
+    </form>
+    <br><br>
+
+      <footer>
+        <p>Contact us: info@fragrancemuse.com | Follow us on social media!</p>
+        <p>&copy; 2023 Fragrance Muse. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #f0ebe1;
+            overflow-x: hidden;
+        }
+        nav {
+            background-color: #1f1f1f;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #f0ebe1;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #e0afa0;
+        }
+        .catalog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .catalog > div {
+            background: linear-gradient(145deg, #3c2321, #5c3a35);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(92, 58, 53, 0.7);
+            overflow: hidden;
+            width: 260px;
+            cursor: pointer;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .catalog > div:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(224, 175, 160, 0.9);
+        }
+        .catalog img {
+            width: 100%;
+            height: 280px; 
+            object-fit: cover;
+            filter: brightness(0.9);
+            transition: filter 0.35s ease;
+            display: block;
+        }
+        .catalog > div:hover img {
+            filter: brightness(1);
+        }
+        .text {
+            padding: 20px 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .text h6 {
+            color: #f0d6c0;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        .text h6.price {
+            color: #d9a77b;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 0.04em;
+        }
+        button {
+            align-self: center;
+            background-color: #d9a77b;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 40px;
+            color: #0b0b0b;
+            font-weight: 700;
+            font-size: 1rem;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(217, 167, 123, 0.7);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        button:hover {
+            background-color: #b37854;
+            box-shadow: 0 10px 20px rgba(179, 120, 84, 0.85);
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .catalog > div {
+                width: 90vw;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+        }
+               footer {
+            background-color: #1f1f1f;
+            color: #bbb1a7;
+            padding: 25px 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-family: 'Roboto', sans-serif;
+            border-top: 1px solid #422a18;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="fragrance-guide.html">Fragrance Guide</a>
+        <a href="buy.html">Buy</a>
+    </nav>
+    <div class="catalog">
+        <div>
+            <img src="https://images.pexels.com/photos/3989394/pexels-photo-3989394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="text">
+                <h6>A light and airy scent with hints of sea salt, jasmine, and fresh linen. Evokes the tranquility of the ocean.</h6>
+                <h6 class="price">Price: $80.00</h6>
+                <button type="button">Buy now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/2204414241/photo/black-perfume-bottle-with-a-wooden-cap-surrounded-by-dry-leaves-pine-needles-and-smoke-earthy.jpg?s=2048x2048&w=is&k=20&c=b2e1tpEcbKJmshf9PFH9y23gBONRXLBfzoMYUh2iP34=" alt="">
+            <div class="text">
+                <h6>A warm blend of rose, cinnamon, and clove. A unique twist on a classic floral fragrance.</h6>
+                <h6 class="price">Price: $90.00</h6>
+                <button type="button">Buy Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/870188666/photo/bottle-of-golden-female-perfume.jpg?s=2048x2048&w=is&k=20&c=MlI0UUvEX2vc3owmBYDM2IKAecEDoyEHy9dTxTTQYa4=" alt="">
+            <div class="text">
+                <h6>A vibrant mix of gardenia, lilac, and green leaves. A celebration of spring in a bottle.</h6>
+                <h6 class="price">Price: $70.00</h6>
+                <button type="button">Buy Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/528959048/photo/couple-of-perfume-bottles.jpg?s=2048x2048&w=is&k=20&c=ibgs_49E2WGfyxCfECMqj-qUdpJBxRrXUhU1sMjSdiw=" alt="">
+            <div class="text">
+                <h6>A rich and luxurious scent featuring amber, musk, and a hint of vanilla. Perfect for a cozy evening.</h6>
+                <h6 class="price">Price: $100.00</h6>
+                <button type="button">Buy Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/1289280144/photo/a-glass-bottle-of-perfume-on-a-dark-wooden-background-with-water-droplets.jpg?s=2048x2048&w=is&k=20&c=AA63JQjNYXsuvDOdG_3l8HEEhHbjbFF8hRzPEzQSllU=" alt="">
+            <div class="text">
+                <h6>A mysterious blend of pine, moss, and earthy notes. Captures the essence of a serene woodland escape.</h6>
+                <h6 class="price">Price: $85.00</h6>
+                <button type="button">Buy Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/1332463546/photo/glass-bottle-of-perfume.jpg?s=2048x2048&w=is&k=20&c=aOX2FonVRv5buTqJNSAjRNsGzVjquR3c19xBKz6jMTQ=" alt="">
+            <div class="text">
+                <h6>A deep, sensual fragrance with notes of amber, patchouli, and dark berries. Perfect for evening elegance.</h6>
+                <h6 class="price">Price: $110.00</h6>
+                <button type="button">Buy Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/id/1781464528/photo/glass-bottle-of-perfume-with-a-smoke.jpg?s=2048x2048&w=is&k=20&c=3tJWw-NPsxJUNpn_nwjCJxwSnrwxiYdPpk6LyB7inOg=" alt="">
+            <div class="text">
+                <h6>A refreshing burst of lemon, bergamot, and grapefruit. Energizing and uplifting for everyday wear.</h6>
+                <h6 class="price">Price: $75.00</h6>
+                <button type="button">Buy Now</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://images.pexels.com/photos/3059609/pexels-photo-3059609.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="text">
+                <h6>An enchanting blend of sandalwood, cedar, and a touch of vanilla. Ideal for the adventurous spirit.</h6>
+                <h6 class="price">Price: $95.00</h6>
+                <button type="button">Buy Now</button>
+            </div>
+        </div>
+    </div>
+      <footer>
+        <p>Contact us: info@fragrancemuse.com | Follow us on social media!</p>
+        <p>&copy; 2023 Fragrance Muse. All rights reserved.</p>
+    </footer>
+</body>
+</html>
