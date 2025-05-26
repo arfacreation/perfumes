@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fragrance Muse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #f0ebe1;
+            overflow-x: hidden;
+        }
+        nav {
+            background-color: #1f1f1f;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: #f0ebe1;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #e0afa0;
+        }
+        .header {
+            position: relative;
+            max-height: 600px;
+            overflow: hidden;
+        }
+        .header img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            filter: brightness(0.55);
+            display: block;
+        }
+        .main-text {
+            position: absolute;
+            bottom: 50%;
+            right: 20%;
+            transform: translateY(50%);
+            width: 100%;
+            max-width: 600px;
+            color: #e0afa0;
+            font-family: 'Playfair Display', serif;
+            text-align: right;
+            padding: 0 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
+        .main-text h5 {
+            font-weight: 400;
+            font-size: 1.15rem;
+            margin-top: 10px;
+            font-style: italic;
+            color: #f0ebe1;
+            text-shadow: none;
+        }
+        .images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 40px auto 60px auto;
+            padding: 0 15px;
+        }
+        .image-card {
+            position: relative;
+            overflow: hidden;
+            flex: 1 1 220px;
+            max-width: 250px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(224, 175, 160, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(145deg, #2b1b10 0%, #422a18 100%);
+        }
+        .image-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px #e0afa0ff;
+        }
+        .image-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            filter: brightness(0.85);
+            transition: filter 0.3s ease;
+        }
+        .image-card:hover img {
+            filter: brightness(1);
+        }
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.7) 100%);
+            width: 100%;
+            padding: 15px 10px;
+            border-radius: 0 0 10px 10px;
+            color: #f0ebe1;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .image-card:hover .overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+        .journey-section {
+            max-width: 900px;
+            margin: 0 auto 80px auto;
+            padding: 0 15px;
+            font-family: 'Playfair Display', serif;
+            color: #e0afa0;
+            text-align: center;
+        }
+        .journey-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+        .journey-section p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #ccc3bb;
+            max-width: 650px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #bbb1a7;
+            padding: 25px 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-family: 'Roboto', sans-serif;
+            border-top: 1px solid #422a18;
+        }
+        @media (max-width: 768px) {
+            .main-text {
+                position: static;
+                transform: none;
+                text-align: center;
+                max-width: 50%;
+                font-size: 1.8rem;
+                margin: 20px auto 0 auto;
+                color: #e0afa0;
+                padding: 0 10px;
+            }
+            .main-text h5 {
+                font-size: 1rem;
+                color: #f0ebe1;
+            }
+            .images {
+                gap: 18px;
+            }
+            .image-card {
+                max-width: 100%;
+                flex: 1 1 100%;
+            }
+            .journey-section h3 {
+                font-size: 1.6rem;
+            }
+            .journey-section p {
+                font-size: 1rem;
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="fragrance-guide.html">Fragrance Guide</a>
+        <a href="buy.html">Buy</a>
+    </nav>
+    <div class="header">
+        <img src="https://media.istockphoto.com/id/2129926785/photo/concept-of-fragrant-flavored-perfume-close-up.jpg?s=2048x2048&w=is&k=20&c=P-mW4FT_7YIHVVecqgfFlAN9J00YQjYzqu1EH3e4FTM=" alt="Luxurious perfume bottle on dark background"data-aos-duration="1000" />
+        <div class="main-text">
+            <h2><span class="underline-center">UNVEIL</span> THE ESSENCE<br />OF LUXURY</h2>
+            <h5>"Let every scent whisper elegance,<br />leaving an unforgettable trace."</h5>
+        </div>
+    </div>
+    <h3 class="quote">
+        "Fragrance is the poetry of memory, weaving unseen threads between moments and emotions. Each scent tells a story, a delicate whisper of elegance that lingers
+        long after time has passed."
+    </h3>
+    <div class="images">
+        <div class="image-card" data-aos="zoom-in" data-aos-delay="500">
+            <img src="https://media.istockphoto.com/id/1163063005/photo/vase-and-dry-flower.jpg?s=2048x2048&w=is&k=20&c=FPh1JekAplU9GWjQvv-2Xd5Tpizan50XIa6NHR89zq8=" alt="Elegant perfume bottle with floral notes" data-aos-duration="1000" data-aos-delay="200"/>
+            <div class="overlay">
+                A fragrance that enhances your charm, boosts your confidence, and leaves an unforgettable impression.
+            </div>
+        </div>
+        <div class="image-card" data-aos="zoom-in" data-aos-delay="500">
+            <img src="https://media.istockphoto.com/id/1783654102/photo/perfume-bottle-in-smoke.jpg?s=2048x2048&w=is&k=20&c=jLglcAo6ehwLgnaajGKncfC3IsbLm9UGQehqp39RghA=" alt="Sophisticated perfume bottle with woody notes" data-aos-duration="1000" data-aos-delay="200"/>
+            <div class="overlay">
+                The right fragrance makes you unforgettable—elevate your presence, enhance your charm.
+            </div>
+        </div>
+        <div class="image-card" data-aos="zoom-in" data-aos-delay="500">
+            <img src="https://media.istockphoto.com/id/1530130741/photo/perfumery-bottle-on-black.jpg?s=2048x2048&w=is&k=20&c=y7R4w9OeK_w4FVsc1GMXC6P3sMudZQWqk_laiO0VTk0=" alt="Charming perfume bottle with citrus notes" data-aos-duration="1000" data-aos-delay="200"/>
+            <div class="overlay">
+                Elevate your presence, captivate the world—let your fragrance speak before you do.
+            </div>
+        </div>
+        <div class="image-card" data-aos="zoom-in" data-aos-delay="500">
+            <img src="https://media.istockphoto.com/id/1308766768/vector/perfume-for-men-creative-promotional-banner-vector.jpg?s=2048x2048&w=is&k=20&c=4Re9WKX0fV7ALdjAb1ZGlqQb8KnEfxC08wF-wolsaLo=" alt="Signature perfume bottle with oriental notes" data-aos-duration="1000" data-aos-delay="200"/>
+            <div class="overlay">
+                Your fragrance is your signature—elevate your aura, enchant the world.
+            </div>
+        </div>
+    </div>
+    <section class="journey-section" aria-label="Our Journey">
+        <h3>Our Fragrance Journey</h3>
+        <p>From the delicate bloom of the first flower to the majestic aroma that lingers, our journey celebrates every note and nuance. Each bottle tells a tale — of heritage, passion, discovery, and timeless elegance.</p>
+    </section>
+    <footer>
+        <p>Contact us: info@fragrancemuse.com | Follow us on social media!</p>
+        <p>&copy; 2023 Fragrance Muse. All rights reserved.</p>
+    </footer>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      AOS.init();
+   </script>
+</body>
+</html>
+
+
